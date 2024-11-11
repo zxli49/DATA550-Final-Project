@@ -1,0 +1,5 @@
+*.html
+.DS_Store
+# Ignore log files and temp files
+*.log
+*.tmp
