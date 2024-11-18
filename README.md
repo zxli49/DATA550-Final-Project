@@ -1,4 +1,13 @@
-# Code Description
+# DATA550 Final Project Repository
+
+## Generate Final Report
+
+1. Ensure you have RStudio installed on your system.
+2. Clone this repository to your local machine.
+3. Set your working directory in RStudio.
+4. Run the command `make final_report.html` in the terminal.
+
+## Code Description
 
 `code/01_data_processing.R`
 - read raw data from `data/` folder
@@ -6,7 +15,7 @@
 
 `code/02_make_table.R`
 - read clean data from `data/` folder
-- save table 1 in `output/` folder
+- save descriptive summary table 1 in `output/` folder
 
 `code/03_make_figures.R`
 - read clean data from `data/` folder
@@ -25,5 +34,6 @@
 - `make data_cleaned.rds` will save the cleaned data in `data/` folder
 - `make table1.rds` will generate a descriptive summary table needed to compile the report
 - `make .png` will generate 2 figures needed to compile the report
+- `make final_report.html` generates the final report in `.html` format.
 - `make clean` will remove all generated files
 
