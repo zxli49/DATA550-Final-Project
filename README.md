@@ -1,11 +1,12 @@
 # DATA550 Final Project Repository
 
-## Generate Final Report
+## Synchronize Package Repository and Generate Final Report
 
 1. Ensure you have RStudio installed on your system.
 2. Clone this repository to your local machine.
-3. Set your working directory in RStudio.
-4. Run the command `make final_report.html` in the terminal.
+3. Make sure package `renv` is installed and the project environment is activated.
+4. Run the command `make install` in the terminal to synchronize the package repository.
+5. Run the command `make final_report.html` in the terminal.
 
 ## Code Description
 
