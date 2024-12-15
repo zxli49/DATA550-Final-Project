@@ -36,6 +36,8 @@ COPY data/Sleep_health_and_lifestyle_dataset.csv /project/data/
 
 COPY code /project/code
 
+RUN mkdir -p /project/report
+
 # intall pandoc
 RUN apt-get update && apt-get install -y \
     pandoc \

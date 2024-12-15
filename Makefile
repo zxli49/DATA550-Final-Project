@@ -1,5 +1,5 @@
 final_report.html: final_report.Rmd data_cleaned.rds code/04_render_final_report.R table1.rds .png
-	Rscript code/04_render_final_report.R
+	Rscript code/04_render_final_report.R && mv final_report.html report
 
 # creates cleaned data
 data_cleaned.rds: code/01_data_processing.R
@@ -22,11 +22,11 @@ install:
 	Rscript -e "renv::restore(prompt = FALSE)"
 
 # build image
-final_docker_image: Dockerfile $(PROJECTFILES) $(RENVFILES)
-	docker build -t zxli49/data550_final .
+final_docker_image: Dockerfile
+	docker build -t zxli49/data550-final .
 	
 # build the report automatically in container
 final_docker:
-	docker run -v "/$(pwd)":/project zxli49/data550_final
+	docker run -v "$$(pwd)/report":/project/report zxli49/data550-final
 	
  
