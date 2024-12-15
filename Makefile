@@ -15,7 +15,7 @@ table1.rds: code/02_make_table.R
 
 .PHONY: clean
 clean:
-	rm -f output/*.png && rm -f final_report.html && rm -f output/table1.rds && rm -f data/data_cleaned.rds
+	rm -f output/*.png && rm -f report/final_report.html && rm -f output/table1.rds && rm -f data/data_cleaned.rds
 
 .PHONY: install
 install:
@@ -27,6 +27,6 @@ final_docker_image: Dockerfile
 	
 # build the report automatically in container
 final_docker:
-	docker run -v "$$(pwd)/report":/project/report zxli49/data550-final
+	docker run -v "$$(pwd)"/report:/project/report zxli49/data550-final
 	
  
