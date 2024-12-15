@@ -20,3 +20,13 @@ clean:
 .PHONY: install
 install:
 	Rscript -e "renv::restore(prompt = FALSE)"
+
+# build image
+final_docker_image: Dockerfile $(PROJECTFILES) $(RENVFILES)
+	docker build -t zxli49/data550_final .
+	
+# build the report automatically in container
+final_docker:
+	docker run -v "/$(pwd)":/project zxli49/data550_final
+	
+ 
