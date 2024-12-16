@@ -1,6 +1,6 @@
 # DATA550 Final Project Repository
 
-## Synchronize Package Repository and Generate Final Report locally
+## Synchronize Package Repository and Generate Final Report locally using
 
 1. Ensure you have RStudio installed on your system.
 2. Clone this repository to your local machine and set the working directory to this repository.
@@ -14,14 +14,14 @@
 
 ### 1. Download the image from DockerHub
 
-- Link of the image on DockerHub: \ https://hub.docker.com/repository/docker/zxli49/data550-final/general
+- Link of the image on DockerHub: https://hub.docker.com/repository/docker/zxli49/data550-final/general
 - Run `docker pull zxli49/data550-final:latest` to download the Docker image
 
 ### 2. Docker build: Build the Docker image
-- Run `make final_docker_image` to build the Docker image
+- Run `make build` to build the Docker image
 
 ### 3. Docker run: Build the report automatically in container
-- Run `make final_docker` to generate the report automatically and save it to the `report/` directory.
+- Run `make docker_run_mac` or `make docker_run_win` to generate the report automatically and save to local `report/` directory.
 
 
 ## Code Description
@@ -53,8 +53,7 @@
 - `make table1.rds` will generate a descriptive summary table needed to compile the report
 - `make .png` will generate 2 figures needed to compile the report
 - `make final_report.html` generates the final report in `.html` format and saves to `report/` folder
-- `make final_docker_image` will build the docker image
-- `make final_docker` will create the final report using `docker run`.
+- `make build` will build the docker image
 
 `Dockerfile`
 - to build an docker image that can be used to create the fully reproducible report.
