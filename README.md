@@ -1,6 +1,6 @@
 # DATA550 Final Project Repository
 
-## Synchronize Package Repository and Generate Final Report locally using
+## Synchronize Package Repository and Generate Final Report locally using `make` in terminal
 
 1. Ensure you have RStudio installed on your system.
 2. Clone this repository to your local machine and set the working directory to this repository.
